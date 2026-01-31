@@ -1,0 +1,55 @@
+{
+  "pdfs": [
+    {
+      "name": "Scrum Guide 2020",
+      "url": "https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Japanese.pdf",
+      "output_filename": "scrum-guide-2020.md",
+      "version": "2020"
+    },
+    {
+      "name": "Scrum Guide 2017",
+      "url": "https://scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-Japanese.pdf",
+      "output_filename": "scrum-guide-2017.md",
+      "version": "2017"
+    },
+    {
+      "name": "Scrum Guide 2016",
+      "url": "https://scrumguides.org/docs/scrumguide/v2016/2016-Scrum-Guide-Japanese.pdf",
+      "output_filename": "scrum-guide-2016.md",
+      "version": "2016"
+    },
+    {
+      "name": "Scrum Guide 2013",
+      "url": "https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-JA.pdf",
+      "output_filename": "scrum-guide-2013.md",
+      "version": "2013"
+    },
+    {
+      "name": "Scrum Guide 2011 October",
+      "url": "https://web.archive.org/web/20130120181159/http://scrum.org/Portals/0/Documents/Scrum%20Guides/Scrum%20Guide%20-%20JA.pdf",
+      "output_filename": "scrum-guide-2011-october.md",
+      "version": "2011-10"
+    },
+    {
+      "name": "Scrum Guide 2011 July",
+      "url": "https://web.archive.org/web/20111005103424/http://www.scrum.org/storage/scrumguides/Scrum%20Guide%20-%20JA.pdf",
+      "output_filename": "scrum-guide-2011-july.md",
+      "version": "2011-07"
+    },
+    {
+      "name": "Nexus Guide 2021",
+      "url": "https://scrumorg-website-prod.s3.amazonaws.com/drupal/2021-02/2021-Nexus-Guide-Japanese.pdf",
+      "output_filename": "nexus-guide-2021.md",
+      "version": "2021"
+    },
+    {
+        "name": "Scrum Guide Expansion Pack",
+        "url": "https://scrumexpansion.org/ja/scrum-guide-expanded/2025.6/pdf/scrum-guide-expansion-pack.ja.pdf",
+        "output_filename": "scrum-guide-expansion-pack.md",
+        "version": "2025.6"
+    }
+  ],
+  "output_dir": "docs",
+  "image_dir": "docs/images",
+  "temp_dir": "temp"
+}
