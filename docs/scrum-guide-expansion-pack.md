@@ -10,7 +10,7 @@
 
 ![_page_0_Picture_5.jpeg](images/scrum-guide-expansion-pack_image_3.png)
 
-Version 1.0 June *2025 Ralph Jocham, John Coleman, and Jeff Sutherland.* 
+Version 1.0 June *2025 Ralph Jocham, John Coleman, and Jeff Sutherland.*
 
 2025年10月2日 翻訳版
 

@@ -8,7 +8,7 @@
 
 *2011* 年 *7* 月
 
-*Developed and sustained by Ken Schwaber and Jeff Sutherland* 
+*Developed and sustained by Ken Schwaber and Jeff Sutherland*
 
 ![_page_0_Picture_8.jpeg](images/scrum-guide-2011-july_image_3.png)
 
