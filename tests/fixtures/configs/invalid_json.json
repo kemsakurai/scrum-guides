@@ -1,0 +1,9 @@
+{
+  "pdfs": [
+    {
+      "name": "Test PDF"
+      "url": "missing comma here"
+    }
+  ]
+  "output_dir": "docs"
+}

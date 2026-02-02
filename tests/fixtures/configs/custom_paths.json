@@ -1,0 +1,13 @@
+{
+  "pdfs": [
+    {
+      "name": "Custom Test",
+      "url": "https://example.com/custom.pdf",
+      "output_filename": "custom.md",
+      "version": "1.0"
+    }
+  ],
+  "output_dir": "custom_output",
+  "image_dir": "custom_output/imgs",
+  "temp_dir": "custom_temp"
+}

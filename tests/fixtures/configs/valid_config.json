@@ -1,0 +1,19 @@
+{
+  "pdfs": [
+    {
+      "name": "Test PDF 2024",
+      "url": "https://example.com/test.pdf",
+      "output_filename": "test-2024.md",
+      "version": "2024"
+    },
+    {
+      "name": "Test PDF 2020",
+      "url": "https://example.com/test2.pdf",
+      "output_filename": "test-2020.md",
+      "version": "2020"
+    }
+  ],
+  "output_dir": "docs",
+  "image_dir": "docs/images",
+  "temp_dir": "temp"
+}

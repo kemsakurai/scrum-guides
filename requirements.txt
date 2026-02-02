@@ -1,2 +1,7 @@
 marker-pdf
 requests
+pytest
+pytest-cov
+pytest-mock
+pytest-html
+coverage-badge

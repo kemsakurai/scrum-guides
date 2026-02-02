@@ -116,6 +116,98 @@ python convert_pdf_to_md.py --config custom_config.json
 python convert_pdf_to_md.py --help
 ```
 
+## 🧪 テスト
+
+このプロジェクトは包括的なテストスイートを備えています。
+
+### テスト環境のセットアップ
+
+テストの実行には、開発用依存関係のインストールが必要です（既に`requirements.txt`に含まれています）：
+
+```bash
+pip install -r requirements.txt
+```
+
+### 基本的なテスト実行
+
+```bash
+# すべてのテストを実行
+pytest tests/test_convert_pdf_to_md.py -v
+
+# カバレッジレポート付きで実行
+pytest tests/test_convert_pdf_to_md.py --cov=convert_pdf_to_md --cov-report=term
+
+# HTMLカバレッジレポートを生成
+pytest tests/test_convert_pdf_to_md.py --cov=convert_pdf_to_md --cov-report=html
+# レポートは htmlcov/index.html で確認できます
+```
+
+### Phase別テスト実行
+
+テストは開発フェーズごとにマーカーで分類されています：
+
+```bash
+# Phase 1のみ実行（基本機能テスト: 38件）
+pytest tests/test_convert_pdf_to_md.py -m phase1 -v
+
+# Phase 2のみ実行（統合テスト: 18件）
+pytest tests/test_convert_pdf_to_md.py -m phase2 -v
+
+# Phase 1 + Phase 2を実行（計56件）
+pytest tests/test_convert_pdf_to_md.py -m "phase1 or phase2" -v
+```
+
+### テストカテゴリ別実行
+
+```bash
+# ユニットテストのみ実行
+pytest tests/test_convert_pdf_to_md.py -m unit -v
+
+# 統合テストのみ実行
+pytest tests/test_convert_pdf_to_md.py -m integration -v
+
+# 実PDFテストのみ実行
+pytest tests/test_convert_pdf_to_md.py -m real_pdf -v
+```
+
+### テストカバレッジ
+
+現在のテストカバレッジ: **94%**
+
+```
+convert_pdf_to_md.py    357行中336行カバー（94%）
+```
+
+主要な機能は全てテストでカバーされており、以下の領域を検証しています：
+
+- ✅ 設定ファイルの読み込みと検証
+- ✅ PDFダウンロード機能（正常系・異常系）
+- ✅ Markdown変換とメタデータ処理
+- ✅ Markdown最適化機能
+- ✅ バックアップとファイル操作
+- ✅ 画像抽出と参照検証
+- ✅ エラーハンドリング
+- ✅ CLIオプション解析
+- ✅ E2Eワークフロー
+
+### テストで使用されるフィクスチャ
+
+テストでは以下のリソースを使用します：
+
+- **Mozilla PDF.js サンプルPDF**: 実PDFテスト用の軽量サンプル（103KB, 290KB）
+- **モック化されたmarker-pdf**: 高速なテスト実行のため、marker-pdfは完全にモック化
+- **一時ディレクトリ**: 各テストは独立した一時ディレクトリで実行され、クリーンアップも自動
+
+### CI/CDでのテスト実行
+
+```bash
+# クイック検証（Phase 1のみ、約3秒）
+pytest tests/test_convert_pdf_to_md.py -m phase1 -q
+
+# 完全検証（Phase 1+2、カバレッジ付き、約6秒）
+pytest tests/test_convert_pdf_to_md.py -m "phase1 or phase2" --cov=convert_pdf_to_md --cov-report=term -q
+```
+
 ## 🔧 機能
 
 ### 自動処理機能
