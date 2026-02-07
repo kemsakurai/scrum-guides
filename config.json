@@ -59,7 +59,7 @@
     },
     {
         "name": "The Kanban Guide",
-        "url": "https://kanbanguides.org/es-es/the-kanban-guide/2025.5/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.es-ES.pdf",
+        "url": "https://kanbanguides.org/ja/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.ja.pdf",
         "output_filename": "kanban-guide.md",
         "version": "2022",
         "license": "CC BY-SA 4.0",
@@ -68,7 +68,7 @@
     },
     {
         "name": "Agile Maturity Model",
-        "url": "https://www.agileleadershipschool.nl/staging/wp-content/uploads/2024/03/Agile-Maturity-Model-EN.pdf",
+        "url": "https://agileleadershipschool.com/wp-content/uploads/2024/09/Agile-Maturity-Model-JA.pdf",
         "output_filename": "agile-maturity-model.md",
         "version": "2024",
         "license": "CC BY-NC-SA 4.0",

@@ -1,199 +1,238 @@
-# La Guía Kanban (mayo de 2025)
+# カンバン ガイド
 
-John Coleman Daniel Vacanti
+## <span id="page-1-0"></span>**序文**
 
-2025-10-30T15:30:00Z
+本ガイドは、カンバンに関する最小限の指針を提示することで、コミュニティにとっての統一的 な参考資料となることを目指している。カンバンは、さまざまなアプローチによって補完するこ とで、価値の提供や組織の課題に関する幅広いニーズに柔軟に適応できるようになる。
 
-### **Prefacio**
+本ガイドでは、いくつかの用語について特定の使い方を定めている。これらは既存の定義を置き 換えることを意図したものではなく、本ガイドにおける用法を明確にするためのものである。
 
-Mayo 2025
+#### **用語の定義**
 
-Este documento pretende ser una referencia unificadora para la comunidad, que ofrece la orientación mínima sobre Kanban. Dependiendo del contexto, varios enfoques pueden complementar Kanban, lo que le permite acomodar todo el espectro de entrega de valor y desafíos organizacionales.
+**カンバン(Kanban)またはカンバンシステム(Kanban system)**: 本ガイドで説明する概念 の全体像。特にナレッジワークに関連するもの
 
-Esta guía contiene convenciones para algunos términos. No pretenden sustituir a otras definiciones existentes, sino aclarar cómo deben aplicarse aquí.
+**ステークホルダー(Stakeholder)**: カンバンシステムのインプット、アクティビティ、アウト カムに対して、責任を持つ、関心を持つ、または影響を受ける個人やグループ、もしくはその他 の存在
 
-### **Convenciones utilizadas**
+**価値(value)**: ステークホルダーにとっての潜在的または実際に得られた恩恵。例として、顧 客、エンドユーザー、組織、環境のニーズを満たすことが挙げられる
 
-**Kanban o sistema Kanban**: El conjunto holístico de conceptos de esta guía (específicamente en lo que se refiere al trabajo del conocimiento, knowledge work).
+**可視化(visualize、visualization)**: アイデアを効果的に伝えるためのあらゆる方法で、視覚 的なものに限らず、概念の明確化なども含む
 
-**Stakeholder**: Entidad, individuo o grupo responsable, interesado en (o afectado por) las entradas, actividades y resultados del sistema Kanban.
+**リスク(risk)**: 望ましくないことが起こる可能性
 
-**Valor**: Beneficio real o potencial para un stakeholder. Algunos ejemplos incluyen satisfacer las necesidades del cliente, del usuario final, de la organización y del entorno.
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-**Visualizar, visualización**: Cualquier método para transmitir ideas de forma efectiva, incluyendo aclaraciones conceptuales, y no necesariamente solo medios visuales.
+## **目次**
 
-**Riesgo**: La posibilidad de que ocurra algo malo.
+| 序文                                 |  |
+|------------------------------------|--|
+| カンバンの定義                            |  |
+| カンバンを使う理由                          |  |
+| カンバンの理論                            |  |
+| カンバンのプラクティス                        |  |
+| ワークフローを定義し可視化する                    |  |
+| ワークフロー内の項目を主体的に管理する<br>ワークフローを改善する |  |
+| フロー指標                              |  |
+| 最後に                                |  |
+| カンバンの歴史                            |  |
+| 謝辞                                 |  |
+| 年の改訂<br>2025                       |  |
+| ライセンス                              |  |
+| 翻訳について                             |  |
 
-© 2019-2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc.
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-This publication is offered for license under the Attribution ShareAlike license of Creative Commons, accessible at <http://creativecommons.org/licenses/by-sa/4.0/legalcode> and also described in summary form at <http://creativecommons.org/licenses/by-sa/4.0/>, By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
+## <span id="page-3-0"></span>**カンバンの定義**
 
-### **Definición de Kanban**
+カンバンとは、あるプロセスを通じて、価値の流れ(フロー)を最適化するための戦略である。 以下の 3 つのプラクティスが連携して機能する。
 
-Kanban es una estrategia para optimizar el flujo de valor a través de un proceso. Comprende las siguientes tres prácticas, que funcionan de manera complementaria:
+- ワークフローを定義し可視化する
+- ワークフロー内の項目を主体的に管理する
+- ワークフローを改善する
 
-- Definición y visualización de un flujo de trabajo (workflow).
-- Gestión activa de los elementos en un flujo de trabajo.
-- Mejora del flujo de trabajo.
+これらのカンバンのプラクティスを実装したものを、総称してカンバンシステムと呼ぶ。カン バンシステムの価値提供に参加する人たちを、「カンバンシステムメンバー(Kanban system members)」と呼ぶ。
 
-En su implementación, estas prácticas Kanban se denominan colectivamente sistema Kanban. Los participantes en la entrega de valor de un sistema Kanban se denominan miembros del sistema Kanban.
+## <span id="page-3-1"></span>**カンバンを使う理由**
 
-### **¿Por qué usar Kanban?**
+カンバンの定義の中心にあるのはフローの概念である。フローとは、潜在的な価値がシステムを 通じて移動することを指す。ほとんどのワークフローが価値を最適化するために存在するよう に、カンバンの戦略はフローを最適化することで価値を最適化する。価値の最適化とは、効果 性、効率性、予測可能性の適切なバランスを追求することを意味する。
 
-El concepto de flujo es esencial en la definición de Kanban. El flujo es el movimiento de valor potencial a través de un sistema. Dado que la mayoría de los flujos de trabajo buscan optimizar el valor, la estrategia de Kanban consiste en optimizar este valor al mejorar el flujo. Optimizar el valor significa esforzarse por encontrar el equilibrio adecuado entre eficacia, eficiencia y predictibilidad:
+- 効果的なワークフローは、ステークホルダーが望むものを、望むタイミングで提供する
+- 効率的なワークフローは、利用可能な経済資源をできるだけ最適に配分し、価値を提供 する
+- 予測可能なワークフローとは、許容できる不確実性の範囲内で価値の提供を的確に予測で きることを意味する
 
-- Un flujo de trabajo eficaz entrega lo que los stakeholders quieren, cuando ellos lo quieren.
-- Un flujo de trabajo eficiente asigna los recursos económicos disponibles de la forma más óptima posible, para entregar valor.
-- Un flujo de trabajo predecible es capaz de pronosticar con exactitud la entrega de valor, con un margen de incertidumbre aceptable.
+カンバンの戦略は、これらの目標を追求するための継続的な改善の一環として、カンバンシステ ムメンバーが適切な問いを早い段階で投げかけるようにすることである。カンバンシステムメン バーは、これら 3 つの要素の持続可能なバランスを目指すべきである。本質的には、カンバンの 戦略とは、トレードオフを理解し、リスクを管理することである。
 
-La estrategia de Kanban consiste en lograr que los miembros del sistema Kanban se hagan las preguntas adecuadas de forma más temprana, como parte de un esfuerzo de mejora continua en pos de estos objetivos. Los miembros del sistema Kanban deben buscar un equilibrio sostenible entre estos tres elementos. En última instancia, la estrategia de Kanban radica en ayudarte a entender compromisos y gestionar riesgos.
+カンバンは、ほぼすべてのワークフローで機能するため、その適用範囲は特定の業界や状況に限 定されない。金融、公益事業、ヘルスケア、ソフトウェアなどのプロフェッショナルなナレッジ ワーカーが、カンバンのプラクティスから恩恵を受けている。カンバンは、価値を提供するほと んどの状況において、どんな規模でも使うことができる。
 
-Dado que Kanban puede funcionar con prácticamente cualquier flujo de trabajo, su aplicación no se limita a ningún sector o contexto específico. Profesionales del conocimiento (Knowledge workers) en áreas como finanzas, servicios públicos, sanidad y software (por mencionar algunas) se han beneficiado de las prácticas de Kanban. Kanban puede utilizarse a cualquier escala y en la mayoría de contextos en los que hay entrega de valor.
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-### **Teoría de Kanban**
+## <span id="page-4-0"></span>**カンバンの理論**
 
-Kanban se fundamenta en la teoría de flujo, la cual abarcan, entre otros, el pensamiento sistémico, los principios lean, la teoría de colas (incluyendo el tamaño de lote y el tamaño de cola), la variabilidad y el control de calidad. La mejora continua, basada en estos enfoques, de un sistema Kanban, es una forma en que las organizaciones pueden intentar optimizar la entrega de valor.
+カンバンは、システム思考、リーン原則、待ち行列理論(バッチサイズとキューサイズ)、変動 (プロセスのばらつき)、品質管理といった確立されたフロー理論に基づいている。これらの理論 に基づいてカンバンシステムを継続的に改善していくことは、組織が価値の提供を最適化しよう とする手段のひとつである。
 
-Muchos enfoques orientados al valor comparten la teoría en la que se basa Kanban. Debido a estas similitudes, Kanban puede y debe ser utilizado para potenciar esas técnicas de entrega.
+既存の価値指向なアプローチは、カンバンの基礎となる理論と共通点を持つ。こうした共通性か ら、カンバンはそれらの提供技法を補完するために活用でき、また活用されるべきである。
 
-### **Prácticas de Kanban**
+## <span id="page-4-1"></span>**カンバンのプラクティス**
 
-#### **Definición y Visualización del Flujo de Trabajo**
+#### <span id="page-4-2"></span>**ワークフローを定義し可視化する**
 
-Optimizar el flujo requiere definir lo que significa flujo en un contexto dado. La comprensión explícita y compartida del flujo entre los miembros del sistema Kanban dentro de su contexto se denomina Definición del Flujo de Trabajo (Definition of Workflow, DoW). La DoW es un concepto fundamental de Kanban. Todos los demás componentes de esta guía dependen en gran medida de cómo se define el flujo de trabajo.
+フローを最適化するためには、その状況におけるフローの意味を定義する必要がある。カンバン システムメンバーが、その状況内で共有するフローの明示的な共通理解のことを「ワークフロー の定義(DoW: Definition of Workflow)」と呼ぶ。DoW は、カンバンの基本概念である。本ガ イドの他の要素はすべて、ワークフローがどのように定義されているかに大きく依存している。
 
-Como mínimo, los miembros del sistema Kanban deben crear su DoW utilizando todos los componentes siguientes:
+**少なくとも**、 カンバンシステムメンバーは以下の要素をすべて用いて DoW を作成する必要が ある。
 
-- 1. Una definición de las unidades individuales de valor que se mueven a través del flujo de trabajo. Estas unidades de valor se denominan elementos de trabajo (o elementos).
-- 2. Una definición de cuándo se consideran iniciados y finalizados (finished) los elementos de trabajo dentro del flujo de trabajo. Dependiendo del elemento de trabajo, su flujo de trabajo puede tener más de un punto de inicio o finalización.
-- 3. Uno o más estados definidos por los que fluyen los elementos de trabajo desde que son iniciados hasta que son finalizados. Cualquier elemento de trabajo entre un punto de inicio y un punto de finalización se considera trabajo en curso (TeC, en inglés WIP).
-- 4. Una definición de cómo se controlará el TeC desde su inicio hasta su finalización.
-- 5. Políticas explícitas sobre cómo los elementos de trabajo pueden fluir a través de cada estado desde iniciado hasta finalizado.
-- 6. Una expectativa de nivel de servicio (service level expectation), ENS (SLE), que es un pronóstico sobre el tiempo que debería tardar un elemento de trabajo en pasar de iniciado a finalizado. La propia ENS consta de dos partes: un periodo de tiempo transcurrido y una probabilidad asociada a ese periodo (p.ej. "el 85 % de los elementos de trabajo estarán finalizados en ocho días o menos"). La ENS debe basarse en el tiempo de ciclo histórico y, una vez calculada, debe visualizarse en la DoW. Si no se dispone de datos históricos de tiempo de ciclo (cycle time), bastará con hacer una estimación aproximada hasta que se disponga de datos históricos suficientes para calcular correctamente la ENS.
+- ワークフローを移動する個々の価値単位の定義 これらの価値単位は、「作業項目(work item)」または、「 項目(item)」と呼ばれる。
+- ワークフロー内での作業項目の「開始(started)」と「終了(finished)」のタイミングの 定義
 
-El orden en que se apliquen no es importante, siempre que se adopten todos.
+作業項目によっては、ワークフローにひとつ以上の開始点や終了点がある場合もある。
 
-Dependiendo de las circunstancias del equipo, los miembros del sistema Kanban a menudo requieren componentes adicionales a la DoW, como valores, principios y acuerdos de trabajo. Las opciones varían, y hay recursos más allá de esta guía que pueden ayudar a decidir cuáles incorporar.
+- 作業項目が開始から終了までの間のフローを示すひとつ以上の状態の定義 開始点(started point)と終了点(finished point)の間にある作業項目は、「進行中の作 業(WIP: Work in Progress)」とみなされる。
+- 開始から終了までの間の WIP の制御方法の定義
+- 作業項目が開始から終了までの各状態をどのように流れるかについての明示的なポリシー (Explicit policy)
 
-Los miembros del sistema Kanban a menudo también requieren de más de una DoW. Esas múltiples DoWs podrían ser para diversos grupos de miembros del sistema Kanban, diferentes niveles de la organización, etc. Aunque esta guía no prescribe un número mínimo o máximo de DoWs, anima a establecer una DoW allá donde los miembros del sistema Kanban necesiten conectar el flujo con la obtención de valor.
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-La visualización de una DoW es un tablero Kanban. Hacer transparentes al menos los componentes mínimos de la DoW en el tablero Kanban es esencial para procesar el conocimiento que informa sobre el funcionamiento óptimo del flujo de trabajo y facilita la mejora continua del proceso.
+• サービスレベル期待値(SLE: Service Level Expectation)
 
-No hay normas específicas sobre el aspecto que debe tener una visualización. Se deben considerar todos los aspectos de la DoW (p.ej. elementos de trabajo, o políticas) junto con cualquier otro factor específico del contexto que pueda afectar a cómo fluye el valor. Los miembros del sistema Kanban solo están limitados por su imaginación respecto a cómo hacer transparente el flujo.
+ひとつの作業項目がフローの開始から終了までにかかると見込まれる時間の予測のこと。 SLE 自体は、経過時間とその期間で終了する確率の 2 つの部分からなる(例:「85% の 作業項目は 8 日以内に終了する」)。SLE は、過去のサイクルタイムに基づいて算出され、 算出後は DoW 上で可視化されるべきである。過去のサイクルタイムのデータが存在しな い場合は、適切な SLE を算出するための十分な履歴データが集まるまで、最善の推測で 代用することができる。
 
-#### **Gestión Activa de los Elementos en un Flujo de Trabajo**
+これらがすべて適用される限り、実装の順序は重要ではない。
 
-Los elementos en el flujo de trabajo deben gestionarse activamente. La gestión activa de los elementos en un flujo de trabajo puede adoptar diversas formas, incluyendo, pero no limitándose a, las siguientes:
+カンバンシステムメンバーは、その置かれた状況に応じて、価値基準、原則、ワーキングアグ リーメントなど、DoW の要素を追加で必要とすることがよくある。その選択肢は多岐にわたり、 本ガイド以外にもどの要素を取り入れるべきかを判断するのに役立つ資料がある。
 
-- Control del TeC (controlling WIP).
-- Asegurarse que los elementos de trabajo no envejezcan innecesariamente, utilizando la ENS como referencia.
-- Desbloquear los elementos de trabajo bloqueados.
+カンバンシステムメンバーが、複数の DoW を必要とすることもよくある。これらの複数の DoW は、複数のカンバンシステムメンバーによるグループ、組織の異なるレベルなどに対応す ることができる。本ガイドでは、DoW の最小数や最大数を規定していないが、カンバンシステ ムメンバーがフローと価値の実現を結びつける必要がある場合は、どこであっても DoW を確立 することを推奨している。
 
-Una práctica habitual es que los miembros del sistema Kanban revisen periódicamente los elementos activos. Esta revisión puede realizarse de forma continua, a intervalos regulares, o mediante una combinación de ambas.
+DoW を可視化したものは、カンバンボードと呼ばれる。少なくとも DoW の最小限の要素をカ ンバンボード上で透明化することは、最適なワークフローの実現につながる知識を整理し、継続 的な改善を促進するために不可欠である。
 
-Los miembros del sistema Kanban deben controlar explícitamente el número de elementos de trabajo dentro de un flujo de trabajo, desde su inicio hasta su finalización. Ese control puede representarse en un tablero Kanban de la forma que los miembros del sistema Kanban consideren oportuna. Lo ideal sería que el sistema no operase ni por encima ni por debajo del punto de control acordado.
+可視化がどのような形式であるべきかについて、特に決まった指針はない。DoW のあらゆる側 面(作業項目やポリシーなど)に加え、価値フローに影響を及ぼす可能性のあるその他の状況固 有の要因を考慮する必要がある。どのようにフローの透明性を確保するかは、カンバンシステム メンバーの想像力以外に制限を受けない。
 
-Un efecto de controlar el TeC es que debería crear un sistema de extracción (pull); los miembros del sistema Kanban deben empezar a trabajar en un elemento (extraer, o seleccionar) sólo cuando haya evidencia de que hay capacidad para hacerlo. Cuando el TeC cae por debajo del punto de control definido en la DoW, puede ser un indicativo para seleccionar nuevo trabajo. Dada una parte del flujo de trabajo, los miembros del sistema Kanban deberían abstenerse de seleccionar un número de elementos de trabajo por encima del punto de control del TeC.
+#### <span id="page-5-0"></span>**ワークフロー内の項目を主体的に管理する**
 
-Controlar el TeC favorece el flujo y a menudo mejora el enfoque colectivo, el compromiso y la colaboración de los miembros del sistema Kanban. Las excepciones aceptables al control del TeC deben explicitarse como parte de la DoW.
+ワークフロー内の項目は主体的に管理されなければならない。ワークフロー内の項目を主体的に 管理するには、以下を含むいくつかの形式がある(ただし、これらに限定されない)。
 
-#### **Mejorar el Flujo de Trabajo**
+- WIP を制御する
+- SLE を参考にして、作業項目が不必要に古くならないようにする
+- ブロックされている作業を解除する
 
-Dada una Definición explícita del Flujo de Trabajo (Dow), la responsabilidad de los miembros del sistema Kanban es mejorar continuamente su flujo de trabajo para lograr un mejor equilibrio entre eficacia, eficiencia y predictibilidad. El estudio continuo del sistema puede conducir a potenciales mejoras de la DoW.
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-Es una práctica común revisar la DoW de vez en cuando para debatir e implementar cualquier cambio necesario. Sin embargo, no es necesario esperar hasta una reunión formal con una cadencia regular para hacer estos cambios. Los miembros del sistema Kanban pueden y deberían realizar modificaciones oportunas según lo dicte su contexto. Además, no hay nada que prescriba que las mejoras en el flujo de trabajo deban ser pequeñas o incrementales. Si los miembros del sistema Kanban consideran que es necesario un cambio significativo, eso es entonces lo que deberían llevar a cabo.
+カンバンシステムメンバーは、進行中の項目を定期的にレビューするのが一般的である。このレ ビューは、継続的または定期的に行うことができる。または、その両方を組み合わせて行うこと ができる。
 
-### **Métricas de Flujo**
+カンバンシステムメンバーは、ワークフローの開始から終了までの作業項目の数を明示的に制御 しなければならない。この制御は、カンバンシステムメンバーが適切と判断する任意の方法でカ ンバンボード上に表現できる。理想的には、システムは合意された制御範囲を超えたり下回った りしない状態で運用されるべきである。
 
-La aplicación de Kanban requiere la recopilación y análisis de un conjunto mínimo de métricas de flujo. Estas son un reflejo de la salud y el rendimiento actuales del sistema Kanban, y ayudarán a tomar decisiones informadas sobre cómo se entrega valor. Las cuatro métricas de flujo obligatorias a monitorizar en Kanban son:
+WIP を制御することによる効果のひとつは、プルシステムを生み出すことにある。カンバンシ ステムメンバーは、対応できる余力があるという明確な合図があるときにのみ、作業項目に着手 すべきである(これを「プルする」または「選択する」と呼ぶ)。DoW で定められた制限を WIP が下回ったとき、それが新たな作業を選択してよい合図となりうる。カンバンシステムメンバー は、ワークフローの特定の場所において、WIP の制御を超える数の作業項目を選択するのは控え るべきである。
 
-- **TeC**: El número de elementos de trabajo iniciados pero no finalizados.
-- **Rendimiento** (throughput): El número de elementos de trabajo finalizados por unidad de tiempo. Ten en cuenta que el rendimiento es el recuento exacto de elementos de trabajo.
-- **Antigüedad del Elemento de Trabajo** (work item age): El tiempo transcurrido desde que un elemento de trabajo es iniciado hasta el momento actual.
-- **Tiempo de Ciclo**: El tiempo transcurrido desde que un elemento de trabajo es iniciado hasta que es finalizado.
+WIP を制御することは、ワークフローの改善に役立つだけでなく、多くの場合、カンバンシステ ムメンバーの全体的な集中力、確約(コミットメント)、コラボレーションを高めることにもつ ながる。WIP を制御する上で許容可能な例外は、DoW の一部として明示しておくべきである。
 
-Siempre que los miembros del sistema Kanban utilicen estas métricas tal y como se describen en esta guía, pueden referirse a cualquiera de estas medidas utilizando cualquier otro nombre que elijan (p.ej., Tiempo de Ciclo podría ser Tiempo de Flujo, Rendimiento podría ser Tasa de Entrega, etc.).
+#### <span id="page-6-0"></span>**ワークフローを改善する**
 
-Para estas cuatro métricas de flujo obligatorias, iniciado y finalizado se interpretan tal como los miembros del sistema Kanban hayan establecido en su DoW.
+明示的な DoW が存在する前提で、カンバンシステムメンバーには、効果性、効率性、予測可能 性のバランスをより適切にするために、ワークフローを継続的に改善していく責任がある。シス テムを継続的に観察し、検討することで、DoW の改善に向けた手がかりが得られる。
 
-Por sí solas, estas métricas carecen de sentido a menos que puedan contribuir a una o más de las tres prácticas de Kanban. Corresponde a los miembros del sistema Kanban decidir la mejor manera de sacar partido a estas métricas (p.ej. visualizarlas en gráficos, evaluar la variación, etc.).
+DoW を随時見直し、必要な変更を議論し、実施するのが一般的である。ただし、これらの変更 を行うために、定期的な公式ミーティングを待つという決まりはない。カンバンシステムメン バーは、状況に応じて、ジャストインタイムに(適宜その場で)変更を加えることができるし、 そうすべきである。また、ワークフローの改善は、必ずしも小さく漸進的でなければならないと いう決まりもない。カンバンシステムメンバーが大きな変更が必要だと感じたのであれば、それ を実施するべきである。
 
-Las métricas de flujo enumeradas en esta guía representan solo el mínimo requerido para operar un sistema Kanban. Los miembros del sistema Kanban pueden, y a menudo deberían, utilizar medidas adicionales específicas del contexto que ayuden a tomar decisiones informadas en base a datos.
+## <span id="page-6-1"></span>**フロー指標**
 
-### **Apostilla**
+カンバンの適用には、最低限のフロー指標(flow metrics)を収集し、分析することが求められ る。これらのフロー指標は、カンバンシステムの現在の健全性とパフォーマンスを反映し、どの
 
-Se pueden y probablemente deban añadirse otros principios, metodologías y técnicas al sistema Kanban. Sin embargo, se debe preservar el espíritu de optimización de valor y el conjunto mínimo de prácticas y métricas.
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-## **Historia de Kanban**
+ように価値を提供するかを判断する上で役立つ。カンバンで追跡すべき 4 つの必須フロー指標 は以下のとおりである。
 
-El origen del actual Kanban se remonta al Sistema de Producción Toyota (y sus antecedentes) y al trabajo de personas como Taiichi Ohno y W. Edwards Deming. El conjunto colectivo de prácticas para el trabajo del conocimiento, ahora comúnmente denominado Kanban, se originó principalmente en un equipo de Corbis en 2006. Esas prácticas se extendieron rápidamente para abarcar una comunidad internacional amplia y diversa que ha seguido mejorando y evolucionando el enfoque.
+- **WIP**: 開始しているが、まだ終了していない作業項目の数
+- **スループット**(throughput): 単位時間あたりに終了した作業項目の数。スループットの 計測は、作業項目の正確な数であることに注意
+- **作業項目の年齢**(Work Item Age): 終了していない作業項目の開始してから現在までの 経過時間
+- **サイクルタイム**(cycle time): 作業項目の開始してから終了までの経過時間
 
-### **Agradecimientos**
+カンバンシステムメンバーは、本ガイドで示されているようにこれらの計測指標を使用する限 り、これらの指標を他の名前で参照してもよい(例: サイクルタイムは、フロータイムと呼んで もよいし、スループットは、デリバリー率と呼んでもよい、など)。
 
-Además de todos los que ayudaron a desarrollar Kanban a lo largo de los años, nos gustaría agradecer específicamente a las siguientes personas por sus contribuciones a esta guía:
+これらの 4 つの必須となるフロー指標における「開始」および「終了」という用語は、カンバン システムメンバーが DoW においてどのように定義したかに基づいて解釈するものである。これ らの計測指標は、それ自体では意味をなさないが、3 つのカンバンプラクティスのいずれかに情 報を提供できる場合は、意味をなす。これらの計測指標をどう活用するか(例: チャートで可視 化する、ばらつきを評価する、など)は、カンバンシステムメンバーが決定する。
 
-Emily Coleman por su inspiración a la hora de ampliar la definición de valor. Julia Wester, Colleen Johnson, Prateek Singh, Christian Neverdal, Magdalena Firlit, Tom Gilb, y Steve Tendon por su perspicaz revisión de los primeros borradores.
+本ガイドに記載されているフロー指標は、カンバンシステムの運用に必要最低限のものにすぎな い。カンバンシステムメンバーは、データに基づいた意思決定を支援するために、状況固有な追 加の指標を用いることができ、また多くの場合、用いるべきである。
 
-#### **Adaptaciones 2025**
+## <span id="page-7-0"></span>**最後に**
 
-Con el fin de transmitir su intención, se añadieron convenciones para:
+カンバンシステムには、他の原則、方法論、技術を追加でき、また多くの場合、追加すべきであ る。しかし、価値の最適化を目指すという精神とともに、最低限のプラクティス、計測指標は保 持されなければならない。
 
-- Kanban, sistema Kanban, stakeholder, valor, riesgo, visualizar, y visualización.
-- El valor obtenido puede ser para los stakeholders, incluyendo entre otros a los clientes.
-- Una definición más sencilla de Kanban, específicamente en lo que se refiere al trabajo del conocimiento.
-- La Expectativa de Nivel de Servicio se trasladó a la sección Definición del Flujo de Trabajo.
-- Menos explícito (y por tanto más flexible) con respecto a cómo se controla el TeC.
-- Más explícito en cuanto a DoWs múltiples, variación y conectar el flujo con la obtención de valor.
-- Se han simplificado las tres prácticas y se menciona más a menudo la selección (elementos).
-- Métricas de Kanban (Kanban Measures en el original en inglés) renombradas a Métricas de Flujo.
-- Más explícito sobre la flexibilidad en torno a los nombres de las métricas de flujo.
-- Suprimida la referencia a la inmutabilidad de Kanban.
+## <span id="page-7-1"></span>**カンバンの歴史**
 
-### **Licencia**
+カンバンの現在の形は、トヨタ生産方式(およびその前身)や大野耐一、W. Edwards Deming といった人たちの仕事にまで起源をたどることができる。現在一般に「カンバン」と呼ばれてい るナレッジワークのためのプラクティスの集合体は、2006 年に Corbis 社のあるチームで始まっ たものである。これらのプラクティスは急速に広まり、現在では多様で国際的な大規模コミュニ
 
-This work is licensed by Orderly Disruption Limited and Daniel S. Vacanti, Inc. under a Creative Commons Attribution 4.0 International License.
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-### **Información de la traducción**
+ティによって継続的に強化され、進化し続けている。
 
-La traducción de la versión 2025.05 ha sido realizada por:
+## <span id="page-8-0"></span>**謝辞**
 
-Aitor Fernández-Ceballos | [linkedin.com/in/aitorfcj/](https://www.linkedin.com/in/aitorfcj/)
+長年にわたりカンバンの発展に寄与してくれたすべての人たちに加えて、本ガイドへの貢献に対 して、特に以下の方々に感謝したい。
 
-#### Revisada por:
+- Emily Coleman には、価値の定義を広げるという着想を与えてもらった
+- Julia Wester、Colleen Johnson、Prateek Singh、Christian Neverdal、Magdalena Firlit、 Tom Gilb、Steve Tendon には、初期ドラフトの査読において、鋭いインサイトを提供し てもらった
 
-- David Zalazar | [linkedin.com/in/david-zalazar-6ba55610b/](https://www.linkedin.com/in/david-zalazar-6ba55610b/)
-- Imanol Calo | [linkedin.com/in/imanol-calo-granillo-icg/](https://www.linkedin.com/in/imanol-calo-granillo-icg/)
-- Iván Garrido | [linkedin.com/in/ivangarridog/](https://www.linkedin.com/in/ivangarridog)
-- Jorge Messina | [linkedin.com/in/jormessina/](https://www.linkedin.com/in/jormessina)
-- Luis Chueca | [linkedin.com/in/luischueca/](https://www.linkedin.com/in/luischueca/)
+## <span id="page-8-1"></span>**2025 年の改訂**
 
-De los párrafos sin cambios en la versión inglesa desde la versión 2020.12, algunos se han modificado ligeramente y otros se han mantenido tal cual la traducción original de:
+- 意図を伝えるために、以下の用語に関して、本ガイドにおける用語の定義を設けた: カンバン、カンバンシステム、ステークホルダー、価値、リスク、可視化
+- 価値の実現は、顧客を含むがこれに限定されないステークホルダーに対して行われる可能 性がある
+- カンバンの定義を簡素化し、特にナレッジワークに関する文脈を明確にした
+- サービスレベル期待値(SLE)をワークフローの定義のセクションに移動した
+- WIP の制御方法をあまり明示しなくすることで、柔軟性を持たせた
+- 複数の DoW、ばらつき、フローと価値の実現のつながりについて、より明示的にした
+- 3 つのプラクティスを簡素化した。また「(項目の)選択」という表現を頻繁に使うように した
+- •「カンバンの指標」を「フロー指標」という呼び方に変更した
+- フロー指標における指標の名前に関する柔軟性について、より明示的にした
+- カンバンの不変性に関する言及を削除した
 
-- Jose Antonio Molina | [jmolina.correoweb@gmail.com](mailto:jmolina.correoweb@gmail.com) | [Linkedin.com/in/molina2018/](https://www.linkedin.com/in/molina2018/)
-- Youssef Oufaska | [hola@leanimprovements.es](mailto:hola@leanimprovements.es) | [Linkedin.com/in/youfaska/](https://www.linkedin.com/in/molina2018/)
+以下は、日本語版固有の改訂である。
 
-#### Revisada por:
+- Actively の訳を「能動的」から「主体的」に変更した
+- blocked work の訳を「妨害された作業」から「ブロックされている作業」に変更した
 
-Jose Casal | [jose.casal@actineo.xyz](mailto:jose.casal@actineo.xyz) | <https://www.linkedin.com/in/jcasal/>
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
 
-#### **Glosario y notas de la traducción**
+## **ライセンス**
 
-| Español                               | Inglés                    | Notas                                                                                                  |
-|---------------------------------------|---------------------------|--------------------------------------------------------------------------------------------------------|
-| Antigüedad del Elemento<br>de Trabajo | Work Item Age             | ————–                                                                                                  |
-| Elemento de Trabajo                   | Work Item                 | ————–                                                                                                  |
-| Expectativa de Nivel de               | Service Level Expectation | ————–                                                                                                  |
-| Servicio (ENS)                        | (SLE)                     |                                                                                                        |
-| Finalizado                            | Finished                  | A veces se ha empleado<br>"finalización" para sonar<br>más natural, aún cuando<br>en inglés no cambia. |
-| Iniciado                              | Started                   | A veces se ha empleado<br>"inicio" para sonar más<br>natural, aún cuando en<br>inglés no cambia.       |
-| Real / obtención                      | Realized / realization    | Referido al Valor.                                                                                     |
-| Pronóstico                            | Forecast                  | Como en las traducciones<br>de Scrum.org                                                               |
+<span id="page-9-0"></span>このガイドは、Orderly Disruption Limited および Daniel S. Vacanti, Inc. によって、クリエイ ティブ・コモンズ 表示 4.0 国際のもとでライセンスされている。
 
-| Español                | Inglés                 | Notas                                                                                                                                                                                                                                                                                                                                                 |
-|------------------------|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pull                   | Extracción             | En otras obras traducido<br>como tracción, extracción,<br>arrastre, jalar, tirar o<br>directamente sin traducir;<br>aunque semánticamente lo<br>más correcto sería<br>"tracción" se usa<br>"extracción" por<br>coherencia con las<br>traducciones ya existentes<br>de Actionable Agile<br>Metrics for Predictability<br>y The Kanban Pocket<br>Guide. |
-| Punto de control       | (noun) Control         | Se mantiene "control"<br>como verbo y gerundio.                                                                                                                                                                                                                                                                                                       |
-| Rendimiento            | Throughput             | En la traducción oficial de<br>Kanban University le<br>llaman indistintamente<br>Tasa de Entrega. Se han<br>traducido las apariciones<br>de "performance" en el<br>texto como "desempeño"<br>para evitar confusiones.                                                                                                                                 |
-| Stakeholder            | Stakeholder            | O "partes interesadas", la<br>definición del término<br>original es más amplia y<br>está muy extendida, razón<br>por la cual se mantiene.<br>También traducido como<br>"participantes".                                                                                                                                                               |
-| Tiempo de Ciclo        | Cycle Time             | ————–                                                                                                                                                                                                                                                                                                                                                 |
-| Trabajo en Curso (TeC) | Work in Progress (WIP) | Como en las traducciones<br>ya existentes de<br>Actionable Agile Metrics<br>for Predictability y The<br>Kanban Pocket Guide.                                                                                                                                                                                                                          |
+This work is licensed by Orderly Disruption Limited and Daniel S. Vacanti, Inc. [under a](http://creativecommons.org/licenses/by/4.0/deed.ja) [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/deed.ja) 4.0 International License.
+
+![_page_9_Picture_3.jpeg](images/kanban-guide_image_1.png)
+
+## **翻訳について**
+
+本ガイドは、英語版からの日本語訳である。日本語訳は、長沢智治が担当した。
+
+翻訳に関する連絡先: 長沢智治(nagasawa@servantworks.co.jp)
+
+なお、本ガイドの翻訳査読は、以下の方々にお願いした:
+
+斎藤紀彦、髙橋博実、仁藤慎平、梅林良太、菅原円、八巻智和(順不同敬称略)
+
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
+
+## **用語集**
+
+| 用語 | 英語 | 日本語 |
+|------|------|--------|
+| カンバン | Kanban | カンバン |
+| カンバンシステム | Kanban system | カンバンシステム |
+| カンバンシステムメンバー | Kanban system members | カンバンシステムメンバー |
+| カンバンボード | Kanban board | カンバンボード |
+| ステークホルダー | Stakeholders | ステークホルダー |
+| 価値 | Value | 価値 |
+| リスク | Risk | リスク |
+| 可視化 | Visualization | 可視化 |
+| ワークフロー | Workflow | ワークフロー |
+| ワークフローの定義 | Definition of Workflow (DoW) | ワークフローの定義 |
+| 作業項目 | Work item | 作業項目 |
+| 項目 | Item | 項目 |
+| 進行中の作業 | Work in Progress (WIP) | 進行中の作業 |
+| 開始 | Started | 開始 |
+| 終了 | Finished | 終了 |
+| プルシステム | Pull system | プルシステム |
+| プルする | Pull | プルする |
+| 選択する | Select | 選択する |
+| サービスレベル期待値 | Service Level Expectation (SLE) | サービスレベル期待値 |
+| 明示的なポリシー | Explicit policies | 明示的なポリシー |
+| フロー指標 | Flow metrics | フロー指標 |
+| スループット | Throughput | スループット |
+| 作業項目の年齢 | Work Item Age | 作業項目の年齢 |
+| サイクルタイム | Cycle Time           | サイクルタイム |
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |               |         |
+
+<sup>©</sup> 2019 – 2025 Orderly Disruption Limited, Daniel S. Vacanti, Inc. Offered for license under the Attribution ShareAlike license of Creative Commons, accessible at http://creativecommons.org/licenses/by-sa/4.0/legalcode and also described in summary form at http://creativecommons.org/licenses/by-sa/4.0/. By using this Kanban Guide, you acknowledge that you have read and agree to be bound by the terms of the Attribution ShareAlike license of Creative Commons.
