@@ -19,7 +19,9 @@ Markdown形式への変換により、AIが効率的にコンテンツを理解�
 
 ## 📚 対象ドキュメント
 
-このリポジトリでは、以下の日本語版スクラムガイドを変換・管理しています:
+このリポジトリでは、以下の日本語版スクラムガイドおよび関連ドキュメントを変換・管理しています:
+
+### スクラムガイド
 
 - **Scrum Guide 2020** (最新版) ✅
 - **Scrum Guide 2017** ✅
@@ -29,6 +31,17 @@ Markdown形式への変換により、AIが効率的にコンテンツを理解�
 - **Scrum Guide 2011 July** ✅
 - **Nexus Guide 2021** (スケーリング拡張ガイド) ✅
 - **Scrum Guide Expansion Pack** ✅
+
+### アジャイル関連ガイド（Creative Commons ライセンス）
+
+以下のドキュメントはCreative Commonsライセンスで提供されており、PDF→Markdown変換が許可されています:
+
+- **フローシステムガイド (The Flow System Guide)** ✅ - CC BY 4.0
+  - 日本語版、著者: John R. Turner, Nigel Thurlow, Brian 'Ponch' Rivera、翻訳: 長沢 智治
+- **カンバンガイド (The Kanban Guide)** ✅ - CC BY-SA 4.0
+  - 日本語版、著者: Daniel S. Vacanti, Scrum.org、翻訳: 長沢 智治 他
+- **アジャイルチームの成熟度モデル (Agile Maturity Model)** ✅ - CC BY-NC-SA 4.0（非商用限定）
+  - 英語版、著者: Ron Eringa 他、提供: Agile Leadership School
 
 ## 🚀 セットアップ
 
@@ -78,13 +91,33 @@ python convert_pdf_to_md.py
 
 ### 特定のファイルのみ処理
 
+一部のファイルのみをダウンロード・変換することができます:
+
 ```bash
-# 特定のファイル名で指定
+# 特定のファイル名で指定（config.jsonのnameフィールドと一致）
 python convert_pdf_to_md.py --files "Scrum Guide 2020" "Nexus Guide 2021"
+
+# Creative Commonsライセンスのドキュメントのみ処理
+python convert_pdf_to_md.py --files "The Flow System Guide" "The Kanban Guide" "Agile Maturity Model"
+
+# フローシステムガイドのみを変換（最適化なし）
+python convert_pdf_to_md.py --files "The Flow System Guide" --no-optimize
 
 # バージョンで指定
 python convert_pdf_to_md.py --versions 2020 2017
+
+# 複数のバージョンと最適化なし
+python convert_pdf_to_md.py --versions 2020 2019 2024 --no-optimize
 ```
+
+**利用可能なファイル名**:
+- `Scrum Guide 2020`, `Scrum Guide 2017`, `Scrum Guide 2016`, `Scrum Guide 2013`
+- `Scrum Guide 2011 October`, `Scrum Guide 2011 July`
+- `Nexus Guide 2021`
+- `Scrum Guide Expansion Pack`
+- `The Flow System Guide` (CC BY 4.0)
+- `The Kanban Guide` (CC BY-SA 4.0)
+- `Agile Maturity Model` (CC BY-NC-SA 4.0)
 
 ### 既存のMarkdownファイルを最適化
 
@@ -248,6 +281,9 @@ docs/
 ├── scrum-guide-2011-july.md
 ├── nexus-guide-2021.md
 ├── scrum-guide-expansion-pack.md
+├── flow-system-guide.md
+├── kanban-guide.md
+├── agile-maturity-model.md
 └── images/
     ├── scrum-guide-2020_image_1.png
     ├── scrum-guide-2020_image_2.png
@@ -310,7 +346,7 @@ backups/
 
 ## � ライセンス & 帰属表示
 
-### 二重ライセンス構造
+### 複数ライセンス構造
 
 このリポジトリは、**スクリプトコード**と**変換されたコンテンツ**で異なるライセンスが適用されます：
 
@@ -320,13 +356,45 @@ backups/
 
 **ライセンス全文**: [LICENSE-MIT](./LICENSE-MIT)
 
-#### 2. 変換されたスクラムガイドコンテンツ - CC-BY-SA 4.0 ライセンス
+#### 2. 変換されたコンテンツのライセンス
 
-`docs/`ディレクトリ内のMarkdownファイル（スクラムガイド、Nexusガイド等の変換コンテンツ）は、**Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)** ライセンスの下で提供されています。
+`docs/`ディレクトリ内のMarkdownファイルは、以下のライセンスで提供されています：
+
+##### スクラムガイド、Nexusガイド - CC-BY-SA 4.0 ライセンス
+
+**Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)** ライセンスの下で提供されています。
 
 **ライセンス全文**: [LICENSE-CC-BY-SA-4.0](./LICENSE-CC-BY-SA-4.0)  
 **ライセンス概要**: https://creativecommons.org/licenses/by-sa/4.0/  
 **法的条文**: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+##### その他のアジャイル関連ガイド - 個別のCreative Commonsライセンス
+
+以下のドキュメントは、それぞれ個別のCreative Commonsライセンスで提供されています：
+
+**フローシステムガイド (The Flow System Guide)** - CC BY 4.0
+- **著者**: John R. Turner, Nigel Thurlow, Brian 'Ponch' Rivera
+- **日本語訳**: 長沢 智治
+- **出典**: https://flowguides.org/admin/files/TFS-Guide-Final-R18-11-2019-ja.pdf
+- **ライセンス**: Creative Commons Attribution 4.0 International (CC BY 4.0)
+- **ライセンスURL**: https://creativecommons.org/licenses/by/4.0/
+- **許可事項**: 商用・非商用問わず共有・翻案可能（著者表示が必要）
+
+**カンバンガイド (The Kanban Guide)** - CC BY-SA 4.0
+- **著者**: Daniel S. Vacanti, Scrum.org 他
+- **日本語訳**: 長沢 智治 他（カンバンガイド日本語版翻訳チーム）
+- **出典**: https://kanbanguides.org/wp-content/uploads/2022/05/The-Kanban-Guide-Japanese.pdf
+- **ライセンス**: Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+- **ライセンスURL**: https://creativecommons.org/licenses/by-sa/4.0/
+- **許可事項**: 商用・非商用問わず共有・翻案可能（著者表示と同一ライセンス継承が必要）
+
+**アジャイルチームの成熟度モデル (Agile Maturity Model)** - CC BY-NC-SA 4.0
+- **著者**: Ron Eringa 他
+- **出典**: Agile Leadership School, https://www.agileleadershipschool.nl/staging/wp-content/uploads/2024/03/Agile-Maturity-Model-EN.pdf
+- **ライセンス**: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+- **ライセンスURL**: https://creativecommons.org/licenses/by-nc-sa/4.0/
+- **許可事項**: 非商用限定で共有・翻案可能（著者表示と同一ライセンス継承が必要）
+- **注意**: 商用利用は許可されていません
 
 ### 原著作物への帰属表示
 

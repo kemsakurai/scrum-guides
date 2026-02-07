@@ -4,7 +4,7 @@
 
 ![_page_0_Picture_2.jpeg](images/scrum-guide-2013_image_1.png)
 
-![_page_0_Picture_4.jpeg](images/scrum-guide-2013_image_1.png)
+![_page_0_Picture_4.jpeg](images/scrum-guide-2013_image_2.png)
 
 *2013* 年 *7* 月
 
