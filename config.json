@@ -65,15 +65,6 @@
         "license": "CC BY-SA 4.0",
         "authors": "Daniel S. Vacanti, Scrum.org",
         "translators": "長沢 智治 他（カンバンガイド日本語版翻訳チーム）"
-    },
-    {
-        "name": "Agile Maturity Model",
-        "url": "https://agileleadershipschool.com/wp-content/uploads/2024/09/Agile-Maturity-Model-JA.pdf",
-        "output_filename": "agile-maturity-model.md",
-        "version": "2024",
-        "license": "CC BY-NC-SA 4.0",
-        "authors": "Ron Eringa 他",
-        "source": "Agile Leadership School"
     }
   ],
   "output_dir": "docs",
