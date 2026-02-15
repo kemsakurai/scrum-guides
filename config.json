@@ -37,34 +37,10 @@
       "version": "2011-07"
     },
     {
-      "name": "Nexus Guide 2021",
-      "url": "https://scrumorg-website-prod.s3.amazonaws.com/drupal/2021-02/2021-Nexus-Guide-Japanese.pdf",
-      "output_filename": "nexus-guide-2021.md",
-      "version": "2021"
-    },
-    {
         "name": "Scrum Guide Expansion Pack",
         "url": "https://scrumexpansion.org/ja/scrum-guide-expanded/2025.6/pdf/scrum-guide-expansion-pack.ja.pdf",
         "output_filename": "scrum-guide-expansion-pack.md",
         "version": "2025.6"
-    },
-    {
-        "name": "The Flow System Guide",
-        "url": "https://flowguides.org/admin/files/TFS-Guide-Final-R18-11-2019-ja.pdf",
-        "output_filename": "flow-system-guide.md",
-        "version": "2019",
-        "license": "CC BY 4.0",
-        "authors": "John R. Turner, Nigel Thurlow, Brian 'Ponch' Rivera",
-        "translators": "長沢 智治"
-    },
-    {
-        "name": "The Kanban Guide",
-        "url": "https://kanbanguides.org/ja/the-kanban-guide/2025.5/pdf/kanban-guide.v2025.5.ja.pdf",
-        "output_filename": "kanban-guide.md",
-        "version": "2022",
-        "license": "CC BY-SA 4.0",
-        "authors": "Daniel S. Vacanti, Scrum.org",
-        "translators": "長沢 智治 他（カンバンガイド日本語版翻訳チーム）"
     }
   ],
   "output_dir": "docs",
